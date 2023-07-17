@@ -24,7 +24,7 @@ function addWeatherToPage(data){
     weather.classList.add('weather');
 
     weather.innerHTML=`
-    <h1><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /> ${temp}°C <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /></h1>
+    <h1 ><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style={color: red} /> ${temp}°C <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /></h1>
     <small>${data.weather[0].main}</small>`;
 
     main.innerHTML = "";
