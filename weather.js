@@ -45,9 +45,8 @@ form.addEventListener('submit',(e) =>{
 })
 
 
-/* Your existing JS code */
 
-// Function to get the current date and time
+
 function getCurrentDateTime() {
     const currentDate = new Date();
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -57,14 +56,11 @@ function getCurrentDateTime() {
     return `${formattedDate} - ${formattedTime}`;
 }
 
-// Update the date and time display
 function updateDateTime() {
     const dateTimeElement = document.getElementById('date-time');
     dateTimeElement.textContent = getCurrentDateTime();
 }
 
-// Call the function to update date and time initially
 updateDateTime();
 
-// Update date and time every minute
-setInterval(updateDateTime, 60000); // 60000 milliseconds = 1 minute
+setInterval(updateDateTime, 60000); 
