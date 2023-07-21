@@ -1,9 +1,6 @@
-*{
-    box-sizing: border-box;
-}
+/* Revised CSS with container background and fixed input box issue */
 
-body{
-   
+body {
     background-image: url(weather.png);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,51 +8,69 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    flex-direction: column;
-    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-input{
-    padding: 1rem;
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f4f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1.item {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    background: linear-gradient(18deg, #3e3ee7, #04e9e9, #06f006);
+    border-radius: 12px;
+}
+
+form#form {
+    margin-bottom: 20px;
+}
+
+input#search {
+    /* width: 100%; */
+    padding: 0.5rem;
     border-radius: 2rem;
     border: none;
-    background-color: rgb(212, 196, 210);
+    background-color: #fff;
     font-family: inherit;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    min-width: 400px;
-    font-size: 2rem;
-    justify-content: center;
+    font-size: 1.8rem;
     text-align: center;
-}
-
-input:focus{
-    outline: none;
-}
-
-.weather{
-    text-align: center;
-    font-size: 4rem;
-    background: linear-gradient(18deg,rgb(62, 62, 231),rgb(4, 233, 233),rgb(6, 240, 6));
-    border-radius: 50px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.929);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow to the input */
 }
 
 
-.weather h1{
-    margin-bottom: 0;
+
+.weather {
+    padding: 30px;
+    background: linear-gradient(18deg, #3e3ee7, #04e9e9, #06f006);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.weather h1 {
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-   
+    justify-content: center;
 }
 
-.item{
-    font-size: 50px;
-    font-weight: 700;
-    background: linear-gradient(15deg,rgb(62, 62, 231),rgb(4, 233, 233),rgb(6, 240, 6));
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.61);
+.weather h1 img {
+    margin: 0 10px;
+}
+
+#date-time {
+    font-size: 2.2rem;
+    color: #090909;
 }

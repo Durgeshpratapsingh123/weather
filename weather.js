@@ -43,3 +43,28 @@ form.addEventListener('submit',(e) =>{
         getWeatherByLocation(city)
     }
 })
+
+
+/* Your existing JS code */
+
+// Function to get the current date and time
+function getCurrentDateTime() {
+    const currentDate = new Date();
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+    const formattedDate = currentDate.toLocaleDateString('en-US', dateOptions);
+    const formattedTime = currentDate.toLocaleTimeString('en-US', timeOptions);
+    return `${formattedDate} - ${formattedTime}`;
+}
+
+// Update the date and time display
+function updateDateTime() {
+    const dateTimeElement = document.getElementById('date-time');
+    dateTimeElement.textContent = getCurrentDateTime();
+}
+
+// Call the function to update date and time initially
+updateDateTime();
+
+// Update date and time every minute
+setInterval(updateDateTime, 60000); // 60000 milliseconds = 1 minute
